@@ -2,7 +2,7 @@
 
 return array(
 			'host' => 'localhost',
-			'dbname' => 'php_base',
+			'dbname' => 'maxzam',
 			'user' => 'root',
 			'password' => '',
 );
