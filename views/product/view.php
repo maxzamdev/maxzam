@@ -7,23 +7,23 @@
       <?php include ROOT.'/views/layouts/sidebar.php'; ?>
         
         <div id="content">
-        	<h2>Product Details</h2>
+        	<h2><?php echo $product['name']; ?></h2>
             <div class="col col_13">
-        	<a  rel="lightbox[portfolio]" href="images/product/10_l.jpg" title="Lady Shoes"><img src="images/product/10.jpg" alt="Image 10" /></a>
+                <a  rel="lightbox[portfolio]" href="/template/images/product/10_l.jpg" title="Lady Shoes"><img src="/template/images/product/10.jpg" alt="Image 10" /></a>
             </div>
             <div class="col col_13 no_margin_right">
                 <table>
                     <tr>
-                        <td height="30" width="160">Price:</td>
-                        <td>$100</td>
+                        <td height="30" width="160">цена:</td>
+                        <td><?php echo $product['price']; ?> $ </td>
                     </tr>
                     <tr>
-                        <td height="30">Availability:</td>
-                        <td>In Stock</td>
+                        <td height="30">Доступность:</td>
+                        <td><?php if($product['status'] == 1) echo 'Есть на складе' ; ?></td>
                     </tr>
                     <tr>
-                        <td height="30">Model:</td>
-                        <td>Product 14</td>
+                        <td height="30">Артикуль:</td>
+                        <td><?php echo $product['code']; ?></td>
                     </tr>
                     <tr>
                         <td height="30">Manufacturer:</td>
@@ -36,8 +36,8 @@
 			</div>
             <div class="cleaner h30"></div>
             
-            <h5><strong>Product Description</strong></h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur semper quam sit amet turpis rhoncus id venenatis tellus sollicitudin. Fusce ullamcorper, dolor non mollis pulvinar, turpis tortor commodo nisl, et semper lectus augue blandit tellus. Quisque id bibendum libero.</p>	
+            <h5><strong>Описание товара</strong></h5>
+            <p><?php echo $product['description']; ?></p>	
             
             <div class="cleaner h50"></div>
             

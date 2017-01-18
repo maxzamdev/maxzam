@@ -81,8 +81,8 @@ ddsmoothmenu.init({
 
     <div id="templatemo_menu" class="ddsmoothmenu">
         <ul>
-            <li><a href="/" class="selected">Главная</a></li>
-            <li><a href="/product">Товары</a>
+            <li><a href="/" >Главная</a></li>
+            <li><a href="/catalog">Каталог</a>
                 <ul>
                     <li><a href="#">Sub menu 1</a></li>
                     <li><a href="#">Sub menu 2</a></li>

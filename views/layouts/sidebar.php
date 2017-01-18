@@ -2,7 +2,7 @@
         	<h3>Каталог</h3>
             <ul class="sidebar_menu">
                 <?php foreach ($categories as $category): ?>
-                <li><a href="/category/<?php echo $category['id']; ?>"> <?php echo $category['name']; ?></a></li>
+                <li class="<?php if($categoryId == $category['id']) echo 'active'; ?>"><a href="/category/<?php echo $category['id']; ?>" class="<?php if($categoryId == $category['id']) echo 'active'; ?>" > <?php echo $category['name']; ?></a></li>
                 <?php endforeach;  ?>
             </ul>
             <h3>Newsletter</h3>
