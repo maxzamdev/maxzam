@@ -99,7 +99,7 @@ ddsmoothmenu.init({
               </ul>
             </li>
             <li><a href="/">Корзина</a></li>
-            <li><a href="checkout.html">Checkout</a></li>
+            <li><a href="/user/register">Регистрация</a></li>
             <li><a href="contact.html">Контакты</a></li>
         </ul>
         <br style="clear: left" />
