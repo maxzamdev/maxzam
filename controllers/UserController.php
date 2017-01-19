@@ -2,6 +2,7 @@
 
 
 class UserController {
+    
     public function actionRegister(){
         $categories = array();
         $categories = Category::getCategoriesList();
@@ -28,7 +29,7 @@ class UserController {
             } 
             
              if (!User::checkPassword($password)) {
-                $errors[] = 'password ne ok';
+                $errors[] = 'Пароль слишком короткий, он должен быть не меньше 6 символов';
             } 
             
              if (User::checkEmailExists($email)) {
@@ -43,5 +44,51 @@ class UserController {
         
         return true;
         
+    }
+    
+    public function actionLogin(){
+        $categories = array();
+        $categories = Category::getCategoriesList();
+        
+       
+        $email = '';
+        $password = '';
+       
+        
+        if (isset($_POST['submit'])) {
+            
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            
+            $errors = false;
+
+             if (!User::checkEmail($email)) {
+                $errors[] = 'email не ok';
+            } 
+            
+             if (!User::checkPassword($password)) {
+                $errors[] = 'password ne ok';
+            } 
+            
+             $userId = User::checkUserData($email,$password);
+             
+             if ($userId == false){
+                 $errors[] = 'Неправильные данные для входа на сайт';
+             } else {
+                 User::auth($userId);
+                
+                 header("Location: /cabinet/");
+             }
+            
+        }
+        
+        require_once '/views/user/login.php';
+        return true;
+    }
+    
+    public function actionLogout(){
+      
+        unset($_SESSION['user']);
+        header("Location: /");
     }
 }

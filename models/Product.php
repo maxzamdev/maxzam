@@ -62,6 +62,30 @@ class Product {
         return $resalt->fetch();
         }
     }
+    public static function getProductByIds($idsArray){
+        
+        $products = array();
+        
+        $db = Db::getConnection();
+        
+        $idsArray = implode(',',$idsArray);
+        
+        $sql = "SELECT * FROM product WHERE status = '1' AND id IN ({$idsArray})";
+        $result  = $db->query($sql);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+        
+        $i=0;
+        while ($row = $result->fetch()){
+           $products[$i]['id']=$row['id'];
+           $products[$i]['code']=$row['code'];
+           $products[$i]['name']=$row['name'];
+           $products[$i]['price']=$row['price'];
+           $i++;
+        }
+       
+        return $products;
+        }
+    
     
      public static function getTotalProductsInCategory($categoryId){
          $db = Db::getConnection();

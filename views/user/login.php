@@ -3,10 +3,9 @@
 <?php include ROOT.'/views/layouts/sidebar.php'; ?>
 
  <div id="content">
-     <?php if ($result):?>
-     <p>Вы зарегистрированы</p>
-     <?php else :?>
-       		<h2>Регистрация</h2>
+    
+   
+       		<h2>Вход на сайт</h2>
                 <?php if(isset($errors)&& is_array($errors)):?>
                 <ul> <?php foreach ($errors as $error):?>
                     <li> - <?php echo $error;?></li>
@@ -17,13 +16,12 @@
             <div class="col col_13 checkout">
                 
                 <form action="#" method="post"> 
-                    <input type="text" name="name" placeholder="Имя" value="<?php echo $name;?>"/>
-                    <input type="email" name="email" placeholder="e-mail" value="<?php echo $email;?>"/>
-                    <input type="password" name="password" placeholder="Пароль" value="<?php echo $password;?>"/><br>
-                    <input type="submit" name="submit" value="Регистрация"/>
+                    <input type="email" name="email" placeholder="e-mail" />
+                    <input type="password" name="password" placeholder="Пароль"/><br>
+                    <input type="submit" name="submit" value="Вход"/>
                 </form>
             </div>
-            <?php endif; ?>
+            
             
            </div> <!-- END of content -->
         <div class="cleaner"></div>

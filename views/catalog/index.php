@@ -49,7 +49,7 @@
             	<a href="/product/<?php echo $product['id']; ?>"><img src="/template/images/product/01.jpg" alt="Product 01" /></a>
                 <h3><?php echo $product['name']; ?></h3>
                 <p class="product_price"><?php echo $product['price']; ?></p>
-                <a href="/cart/<?php echo $product['id']; ?>" class="add_to_cart">В корзину!</a>
+                <a href="/cart/add/<?php echo $product['id']; ?>" class="add_to_cart">В корзину!</a>
                 </div>
             <?php endforeach;?>
                     	

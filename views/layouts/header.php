@@ -59,14 +59,21 @@ ddsmoothmenu.init({
 
 <div id="templatemo_wrapper">
 	<div id="templatemo_header">
-    	<div id="site_title"><h1><a href="#">shop</a></h1></div>
+    	<div id="site_title"><h1><a href="/">shop</a></h1></div>
         
         <div id="header_right">
             <ul id="language">
-                <li><a><img src="/template/images/usa.png" alt="English" /></a></li>
-                <li><a><img src="/template/images/china.png" alt="Chinese" /></a></li>
-                <li><a><img src="/template/images/germany.png" alt="Germany" /></a></li>
-                <li><a><img src="/template/images/india.png" alt="Indian" /></a></li>
+            
+               <?php if (User::isGuest()):?>
+            <li><a href="/user/register">Регистрация</a></li>
+            <li><a href="/user/login">Вход</a></li>
+             <?php else:?>
+            
+            <li><a href="/user/logout">Выход</a></li>
+            <li><a href="/cabinet">Аккаунт</a></li>
+            <?php endif;?> 
+            <li><a href="/cart">Корзина 
+                    <span id="cart-count">(<?php echo Cart::countItems();?>)</span></a></li>
             </ul>
             <div class="cleaner"></div>
             <div id="templatemo_search">
@@ -89,7 +96,7 @@ ddsmoothmenu.init({
                     <li><a href="#">Sub menu 3</a></li>
               </ul>
             </li>
-            <li><a href="/about">About</a>
+            <li><a href="/about">О магазине</a>
                 <ul>
                     <li><a href="#">Sub menu 1</a></li>
                     <li><a href="#">Sub menu 2</a></li>
@@ -98,9 +105,8 @@ ddsmoothmenu.init({
                     <li><a href="#">Sub menu 5</a></li>
               </ul>
             </li>
-            <li><a href="/">Корзина</a></li>
-            <li><a href="/user/register">Регистрация</a></li>
-            <li><a href="contact.html">Контакты</a></li>
+            <li><a href="/contacts">Обратная связь</a></li>
+            
         </ul>
         <br style="clear: left" />
     </div> <!-- end of templatemo_menu -->

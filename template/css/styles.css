@@ -115,3 +115,14 @@ ul.pagination  .active  a, .pagination  .active  span, .pagination  .active  a:h
     background:#c21d1d;
     color:#fff;
 }
+#cart{
+    text-align: left;
+    font-size: 16px;
+}
+
+#cart TD, TH {
+    padding-left:20px; 
+}
+#a_cart {
+    color: #3f49a9;
+}

@@ -110,8 +110,8 @@ h6 { font-size: 12px; margin: 0 0 5px; padding: 0; }
 
 #header_right { float: right; display: inline-block;	 padding-top: 20px; }
 
-#language { margin: 0; padding: 0; list-style: none }
-#language li { float: right; display: block; margin-left: 5px }
+#language { margin: 0; padding: 0; list-style: none; font-size: 16px; }
+#language li { float: right; display: block; margin-left: 15px }
 
 #templatemo_search { clear: both; margin-top: 5px; width: 232px; height: 31px; background: url(/template/images/templatemo_searchbox.png) }
 #templatemo_search form {
@@ -161,7 +161,8 @@ h6 { font-size: 12px; margin: 0 0 5px; padding: 0; }
 
 #templatemo_middle img {
 	float: right;
-	margin-left: 60px;
+	margin-left: 40px;
+        width: 40%;
 }
 
 #templatemo_middle a.buy_now {
