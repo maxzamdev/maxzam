@@ -10,6 +10,10 @@ class CatalogController {
         $latestProducts = array();
         $latestProducts = Product::getLatestProducts();
         
+        $recommendedList = array();
+        $recommendedList = Product::getRecomendedProducts();
+         
+        
         require_once (ROOT.'/views/catalog/index.php');
         
         return true;

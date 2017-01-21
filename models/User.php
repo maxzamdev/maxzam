@@ -21,6 +21,14 @@ class User {
         return false;
     }
     
+    public static function checkPhone($phone){
+         $pattern = "#^((8|\+38)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$#"; 
+        if(preg_match($pattern, $phone, $out)){   
+            return true;
+        }
+        return false;
+    }
+    
     public static function checkPassword($password){
          if(strlen($password) >= 6) {
             return true;

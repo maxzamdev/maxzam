@@ -95,4 +95,59 @@ class Product {
         
         return $row['count'];
      }
+     
+      public static function getRecomendedProducts(){
+           $db = Db::getConnection();
+        
+        $recomendedList = array();
+        
+        $resalt  = $db->query('SELECT id,name,price,image,is_new FROM product'.
+                ' WHERe status = "1" AND is_recommended = "1" ORDER BY id DESC LIMIT 20');
+        
+        $i=0;
+        while ($row = $resalt->fetch()) {
+            $recomendedList[$i]['id'] = $row['id'];
+            $recomendedList[$i]['name'] = $row['name'];
+            $recomendedList[$i]['price'] = $row['price'];
+            $recomendedList[$i]['image'] = $row['image'];
+            $recomendedList[$i]['is_new'] = $row['is_new'];
+            $i++;
+        }
+        return $recomendedList ;
+      }
+      
+      public static function getProductsList(){
+
+        $db = Db::getConnection();
+        
+        $productList = array();
+        
+        $resalt  = $db->query('SELECT id,name,price,image,code FROM product'.
+                ' WHERe status = "1" ORDER BY id ASC');
+        
+        $i=0;
+        while ($row = $resalt->fetch()) {
+            $productList[$i]['id'] = $row['id'];
+            $productList[$i]['name'] = $row['name'];
+            $productList[$i]['price'] = $row['price'];
+            $productList[$i]['image'] = $row['image'];
+            $productList[$i]['code'] = $row['code'];
+            $i++;
+        }
+        return $productList ;
+        
+    }
+    
+     public static function deleteProductById($id){
+
+        $db = Db::getConnection();
+        
+        $sql = 'DELETE FROM product WHERE id = :id';
+        
+        $result = $db->prepare($sql);
+        $result->bindParam(':id', $id, PDO::PARAM_INT);
+        
+        return $result->execute() ;
+        
+    }
 }

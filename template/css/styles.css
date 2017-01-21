@@ -47,7 +47,7 @@
 	margin: 0px 5px 0px; 
 	font-size:11px; 
 	width: 160px; 
-	height: 120px;
+	height: 140px;
 	text-align:center; 
 	font-family: Verdana, Geneva, sans-serif;
 	color:#000000;
@@ -121,8 +121,25 @@ ul.pagination  .active  a, .pagination  .active  span, .pagination  .active  a:h
 }
 
 #cart TD, TH {
-    padding-left:20px; 
+    padding-left:10px; 
 }
 #a_cart {
     color: #3f49a9;
+}
+body#admin {
+    background-color: #ddd;
+    font-size: 20px;
+}
+body#admin div.main{
+   
+   width: 500px;
+   height: 700px;
+}
+body#admin header a {
+  
+   height: 100%;
+}
+body#admin div.main ul li{
+   margin-top: 20px; 
+  
 }

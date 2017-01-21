@@ -54,4 +54,19 @@ class Cart {
          return $total;
      }
      
+      public static function clear(){
+          if ($_SESSION['products']) {
+              unset($_SESSION['products']);
+          }
+      }
+      
+       public static function deleteProduct($id){
+        $id = intval($id);
+        
+        if(isset($_SESSION['products'])){
+            unset( $_SESSION['products'][$id]);
+        }
+
+        return true;
+    }
 }
