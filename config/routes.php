@@ -12,12 +12,16 @@ return array(
         'user/login' => 'user/login',
         'user/logout' => 'user/logout',
     
+        'cabinet/history/([0-9]+)' => 'cabinet/historyId/$1', 
+        'cabinet/history' => 'cabinet/history', 
         'cabinet/edit' => 'cabinet/edit', 
         'cabinet' => 'cabinet/index', 
     
         'cart/checkout' => 'cart/checkout', 
         'cart/delete/([0-9]+)' => 'cart/delete/$1',
         'cart/add/([0-9]+)' => 'cart/add/$1', 
+        'cart/upper/([0-9]+)' => 'cart/upper/$1', 
+        'cart/downper/([0-9]+)' => 'cart/downper/$1', 
         'cart' => 'cart/index', 
     
         'admin/product/create'=> 'adminProduct/create',
@@ -38,6 +42,7 @@ return array(
     
         'admin'=> 'admin/index',
     
+        'search' => 'search/search',
         'about' => 'site/about', 
         'contacts' => 'site/contact', 
 	'' => 'site/index', 

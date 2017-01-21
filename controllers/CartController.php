@@ -120,4 +120,24 @@ class CartController {
         $referrer = $_SERVER['HTTP_REFERER'];
         header("Location: {$referrer}");
      }
+     
+      public function actionUpper($id){
+        
+        
+        Cart::upperCart($id);
+       
+        $referrer = $_SERVER['HTTP_REFERER'];
+        header("Location: {$referrer}");
+        
+    }
+    
+     public function actionDownper($id){
+        
+        
+        Cart::downperCart($id);
+       
+        $referrer = $_SERVER['HTTP_REFERER'];
+        header("Location: {$referrer}");
+        
+    }
 }

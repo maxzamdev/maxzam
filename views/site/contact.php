@@ -19,8 +19,10 @@
                 <form action="#" method="post"> 
                     <p>Ваш e-mail:</p>
                     <input type="email" name="userMail" placeholder="e-mail"/>
+                    <br>
                     <p>Ваше сообщение:</p>
-                    <input type="text" name="userText" /><br>
+                    <textarea name="userText" placeholder="Сообщение"></textarea>
+                    <br>
                     <input type="submit" name="submit" value="Отправить"/>
                 </form>
             </div>

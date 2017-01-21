@@ -9,6 +9,7 @@
 class SiteController {
     
     public function actionIndex(){
+        
         $categories = array();
         $categories = Category::getCategoriesList();
         
@@ -17,6 +18,7 @@ class SiteController {
         
         $recommendedList = array();
         $recommendedList = Product::getRecomendedProducts();
+       
          
         require_once (ROOT.'/views/site/index.php');
         

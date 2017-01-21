@@ -2,7 +2,7 @@
 #SlideItMoo_outer {
 	overflow: hidden;
 	width: 940px; 
-	height: 150px;
+	height: 250px;
 	margin: 0 auto; 
 	background: none; 
 	display:block; 
@@ -16,7 +16,7 @@
 	position:absolute; 
 	cursor:pointer; 
 	width: 25px; 
-	height: 150px; 
+	height: 200px; 
 	bottom:0px; 
 	right: 0px; 
 	background: url(/template/images/slideitmoo_forward.png) no-repeat center;  
@@ -47,16 +47,16 @@
 	margin: 0px 5px 0px; 
 	font-size:11px; 
 	width: 160px; 
-	height: 140px;
+	height: 250px;
 	text-align:center; 
 	font-family: Verdana, Geneva, sans-serif;
 	color:#000000;
 }
-#SlideItMoo_items a { padding:0px; margin:3px 0px 3px; clear:both; display:block; background:none; padding:2px; }
-#SlideItMoo_items a img{ border:none; }
+#SlideItMoo_items a { padding:0px;  clear:none;  display:block; background:none;  }
+#SlideItMoo_items a img{ border:none; max-width: 100px }
 
 #sidebar ul.sidebar_menu li a.active {
-    font-size:15px; 
+    font-size:16px; 
     color: #ffffff;
 }
 #sidebar ul.sidebar_menu li.active {
@@ -66,7 +66,7 @@
 
 ul.pagination {
 	position:    relative  ; 
-	top: -50px;
+	top: 0px;
         left: 400px;
         right: 400px;
         cursor:pointer;  
@@ -143,3 +143,21 @@ body#admin div.main ul li{
    margin-top: 20px; 
   
 }
+
+form#create_form input{
+    width: 300px;
+    height: 40px;
+}
+form#create_form select{
+    width: 100px;
+    height: 30px;
+}
+form#create_form textarea{
+    width: 300px;
+    height: 100px;
+}
+textarea{
+    width: 300px;
+    height: 80px;
+}
+

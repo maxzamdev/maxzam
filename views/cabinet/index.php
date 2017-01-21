@@ -5,7 +5,7 @@
             <h2>Кабинет пользователя</h2>
             <h3>Приветствую, <?php echo $user['name']; ?></h3>
             <a href="/cabinet/edit"> Редактировать личные данные</a><br>
-            <a href="/cabinet/"> История покупок</a>
+            <a href="/cabinet/history"> История покупок</a>
             	
         </div> <!-- END of content -->
         <div class="cleaner"></div>

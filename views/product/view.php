@@ -8,14 +8,14 @@
         
         <div id="content">
         	<h2><?php echo $product['name']; ?></h2>
-            <div class="col col_13">
-                <a  rel="lightbox[portfolio]" href="/template/images/product/10_l.jpg" title="Lady Shoes"><img src="/template/images/product/10.jpg" alt="Image 10" /></a>
+            <div class="col">
+                <img src="<?php echo Product::getImage($product['id']); ?>" width="200" alt="" />
             </div>
-            <div class="col col_13 no_margin_right">
+            <div class="col col_20">
                 <table>
                     <tr>
                         <td height="30" width="160">цена:</td>
-                        <td><?php echo $product['price']; ?> $ </td>
+                        <td><?php echo $product['price']; ?> грн </td>
                     </tr>
                     <tr>
                         <td height="30">Доступность:</td>
@@ -26,13 +26,13 @@
                         <td><?php echo $product['code']; ?></td>
                     </tr>
                     <tr>
-                        <td height="30">Manufacturer:</td>
-                        <td>Apple</td>
+                        <td height="30">Производитель:</td>
+                        <td><?php echo $product['brand']; ?></td>
                     </tr>
-                    <tr><td height="30">Quantity</td><td><input type="text" value="1" style="width: 20px; text-align: right" /></td></tr>
+                    
                 </table>
                 <div class="cleaner h20"></div>
-                <a href="shoppingcart.html" class="add_to_cart">Add to Cart</a>
+                <a href="/cart/add/<?php echo $product['id']; ?>" class="add_to_cart">В корзину</a>
 			</div>
             <div class="cleaner h30"></div>
             

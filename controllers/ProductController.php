@@ -9,6 +9,9 @@ class ProductController {
         $categories = Category::getCategoriesList();
         
         $product = Product::getProductById($productId);
+
+        
+      
         
         require_once (ROOT.'/views/product/view.php');
         

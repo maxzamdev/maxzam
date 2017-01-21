@@ -23,6 +23,29 @@ class Cart {
         return true;
     }
     
+    public static function downperCart($id){
+        $id = intval($id);
+        
+        
+        if(isset($_SESSION['products']["{$id}"])){
+            $_SESSION['products']["{$id}"] --;
+            
+        }
+  
+        return true;
+    }
+    public static function upperCart($id){
+        $id = intval($id);
+        
+        
+        if(isset($_SESSION['products']["{$id}"])){
+            $_SESSION['products']["{$id}"]++;
+            
+        }
+  
+        return true;
+    }
+    
      public static function countItems(){
          if(isset($_SESSION['products'])){
              $count = 0;

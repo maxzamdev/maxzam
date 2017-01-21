@@ -25,7 +25,7 @@ class UserController {
             }
             
              if (!User::checkEmail($email)) {
-                $errors[] = 'email не ok';
+                $errors[] = 'Неправильный e-mail';
             } 
             
              if (!User::checkPassword($password)) {
@@ -38,9 +38,14 @@ class UserController {
             
             if($errors == false){
                 $result = User::register($name, $email, $password);
+                if($result){
+                    User::auth($result);
+                    
+                }
+                
             }
         }
-        require_once '/views/user/register.php';
+        require_once ROOT.'/views/user/register.php';
         
         return true;
         
@@ -82,7 +87,7 @@ class UserController {
             
         }
         
-        require_once '/views/user/login.php';
+        require_once ROOT.'/views/user/login.php';
         return true;
     }
     

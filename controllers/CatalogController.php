@@ -28,6 +28,9 @@ class CatalogController {
          $categoryProducts = array();
          $categoryProducts = Product::getProductsListByCategory($categoryId,$page);
          
+        $recommendedList = array();
+        $recommendedList = Product::getRecomendedProducts();
+         
          $total = Product::getTotalProductsInCategory($categoryId);
          $pagination = new Pagination($total,$page, Product::SHOW_BY_DEFAULT,'page-');
          

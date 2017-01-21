@@ -47,4 +47,36 @@ class CabinetController {
         return true;
         
     }
+    
+     public function actionHistory(){
+         
+          $userId = User::checkLogged();
+          $ordersList = Order::getOrderByUserId($userId);
+ 
+          require_once '/views/cabinet/history.php';
+        
+        return true;
+          
+     }
+     
+     public function actionHistoryId($id){
+         
+          
+         // Получаем данные о конкретном заказе
+        $order = Order::getOrderById($id);
+
+        // Получаем массив с идентификаторами и количеством товаров
+        $productsQuantity = json_decode($order['products'], true);
+
+        // Получаем массив с индентификаторами товаров
+        $productsIds = array_keys($productsQuantity);
+
+        // Получаем список товаров в заказе
+        $products = Product::getProductByIds($productsIds);
+ 
+        require_once '/views/cabinet/historyView.php';
+        
+        return true;
+          
+     }
 }

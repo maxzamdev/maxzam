@@ -17,6 +17,7 @@
                 
                 <form action="#" method="post"> 
                     <input type="email" name="email" placeholder="e-mail" />
+                    <br>
                     <input type="password" name="password" placeholder="Пароль"/><br>
                     <input type="submit" name="submit" value="Вход"/>
                 </form>

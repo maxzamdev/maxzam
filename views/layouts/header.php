@@ -77,9 +77,9 @@ ddsmoothmenu.init({
             </ul>
             <div class="cleaner"></div>
             <div id="templatemo_search">
-                <form action="#" method="get">
-                  <input type="text" value="Search" name="keyword" id="keyword" title="keyword" onfocus="clearText(this)" onblur="clearText(this)" class="txt_field" />
-                  <input type="submit" name="Search" value="" alt="Search" id="searchbutton" title="Search" class="sub_btn"  />
+                <form action="#" method="post">
+                  <input type="text" value="Search" name="search" id="keyword" title="keyword" onfocus="clearText(this)" onblur="clearText(this)" class="txt_field" />
+                  <input type="submit" name="submit" value="" alt="Search" id="searchbutton" title="Search" class="sub_btn"  />
                 </form>
             </div>
          </div> <!-- END -->
@@ -89,21 +89,9 @@ ddsmoothmenu.init({
     <div id="templatemo_menu" class="ddsmoothmenu">
         <ul>
             <li><a href="/" >Главная</a></li>
-            <li><a href="/catalog">Каталог</a>
-                <ul>
-                    <li><a href="#">Sub menu 1</a></li>
-                    <li><a href="#">Sub menu 2</a></li>
-                    <li><a href="#">Sub menu 3</a></li>
-              </ul>
+            <li><a href="/catalog">Каталог</a> 
             </li>
             <li><a href="/about">О магазине</a>
-                <ul>
-                    <li><a href="#">Sub menu 1</a></li>
-                    <li><a href="#">Sub menu 2</a></li>
-                    <li><a href="#">Sub menu 3</a></li>
-                    <li><a href="#">Sub menu 4</a></li>
-                    <li><a href="#">Sub menu 5</a></li>
-              </ul>
             </li>
             <li><a href="/contacts">Обратная связь</a></li>
             

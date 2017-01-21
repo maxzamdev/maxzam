@@ -17,9 +17,13 @@
                   </tr>
                 <?php foreach ($products as $product):   ?>  
                     <tr>
-                        <td><img src="images/product/01.jpg" alt="image 01" /></td> 
+                        <td><img src="<?php echo Product::getImage($product['id']); ?>" width="100" alt="" /></td> 
                         <td><a id="a_cart" href="/product/<?php echo $product['id'];  ?> "><?php echo $product['name'];  ?></a></td>
-                        <td align="center"><input type="text" value="<?php echo $productsInCart[$product['id']];  ?>" style="width: 20px; text-align: right" /> </td>
+                        <td align="center">
+                             <a  href="/cart/downper/<?php echo $product['id'];  ?> "> <- </a>
+                                <?php echo ' '.$productsInCart[$product['id']].' ';  ?> 
+                             <a  href="/cart/upper/<?php echo $product['id'];  ?> ">-></a> 
+                        </td>
                         <td align="right"><?php echo $product['price'];  ?> грн </td> 
                         <td align="right"><?php echo ($product['price']*$productsInCart[$product['id']]);  ?> грн</td>
                         <td align="center"> <a href="/cart/delete/<?php echo $product['id'];  ?>"><img src="/template/images/remove_x.gif" alt="remove" /><br />Убрать</a> </td>
@@ -27,7 +31,7 @@
                      
                   <?php endforeach;?>
                       <tr>
-                    <td colspan="3" align="right"  height="40px">Have you modified your basket? Please click here to <a href="#"><strong>Update</strong></a>&nbsp;&nbsp;</td>
+                    <td colspan="3" align="right"  height="40px">Вы изменили количество товаров? нажмите  <a href="#"><strong>Сюда</strong></a>&nbsp;&nbsp;</td>
                             <td align="right" style="background:#ccc; font-weight:bold">Общая стоимость: </td>
                             <td align="right" style="background:#ccc; font-weight:bold"><?php echo $totalPrice;  ?> грн</td>
                             <td style="background:#ccc; font-weight:bold"> </td>

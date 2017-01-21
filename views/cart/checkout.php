@@ -25,7 +25,9 @@
                     <p>Ваш телефон, формат ввода 38(ххх)ххх-хх-хх</p>
                     <input type="text"  name="userPhone" placeholder="Телефон" value="<?php echo $userPhone;?>"/>
                     <p>Ваш коментарий к заказу:</p>
-                    <input type="text"  name="userComment" placeholder="Комментарий" value="<?php echo $userComment;?>"/><br>
+                    <textarea name="userComment" placeholder="Комментарий" value="<?php echo $userComment;?>"></textarea>
+                    <br>
+                    
                     <input type="submit" name="submit" value="Отправить"/>
                 </form>
             </div>
